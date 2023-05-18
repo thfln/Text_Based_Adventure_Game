@@ -46,14 +46,15 @@ def checkCave(chosenCave):
         # print 'Gobbles you down in one bite!'
         # Need parentheses to call print(). See suggestion below:
       print('Gobbles you down in one bite!')
-
-
-displayIntro()
-# caveNumber = choosecave()
-# The name 'choosecave' is undefined. See suggested change below:
-caveNumber = chooseCave()
-checkCave(caveNumber)
-    
-# print("Thanks for planing")
-# Spelling error noted. See suggested change below:
-print("Thanks for playing")
+      
+# Added a play again loop
+playAgain = 'yes'
+while playAgain == 'yes' or playAgain == 'y':
+   displayIntro()
+   caveNumber = chooseCave()
+   checkCave(caveNumber)
+  
+   print('Do you want to play again? (yes or no)')
+   playAgain = input()
+   if playAgain == "no" or playAgain == "n":
+       print("Thanks for playing!")
