@@ -47,15 +47,8 @@ def checkCave(chosenCave):
         # Need parentheses to call print(). See suggestion below:
       print('Gobbles you down in one bite!')
       
-# Added a play again loop
-playAgain = 'yes'
-while playAgain == 'yes' or playAgain == 'y':
-   displayIntro()
-   caveNumber = chooseCave()
-   checkCave(caveNumber)
-  
-   print('Do you want to play again? (yes or no)')
-   playAgain = input()
-   if playAgain == "no" or playAgain == "n":
-      # Changed departing message
-       print("See you on your next adventure!")
+displayIntro()
+caveNumber = chooseCave()
+checkCave(caveNumber)
+    
+print("Thanks for playing") 
